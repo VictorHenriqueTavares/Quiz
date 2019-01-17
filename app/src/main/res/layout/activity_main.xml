@@ -29,45 +29,50 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <CheckBox
-                    android:id="@+id/viagemZero"
-                    style="@style/FontAnswer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:paddingLeft="24dp"
-                    android:text="@string/answerOneZero"
-                    android:textSize="16sp" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:id="@+id/viagemUmaDuas"
-                    style="@style/FontAnswer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:paddingLeft="24dp"
-                    android:text="@string/answerOneOneOrTwo"
-                    android:textSize="16sp" />
+                    <RadioButton
+                        android:id="@+id/brasilia"
+                        style="@style/FontAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:paddingLeft="24dp"
+                        android:text="Brasília"
+                        android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/viagemTresQuatro"
-                    style="@style/FontAnswer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:paddingLeft="24dp"
-                    android:text="@string/answerOneThreeOrFour"
-                    android:textSize="16sp" />
+                    <RadioButton
+                        android:id="@+id/saoPaulo"
+                        style="@style/FontAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:paddingLeft="24dp"
+                        android:text="São Paulo"
+                        android:textSize="16sp" />
 
-                <CheckBox
-                    android:id="@+id/viagemQuatroMais"
-                    style="@style/FontAnswer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:paddingLeft="24dp"
-                    android:text="@string/answerOneMoreThanFour"
-                    android:textSize="16sp" />
+                    <RadioButton  android:id="@+id/beloHorizonte"
+                        style="@style/FontAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:paddingLeft="24dp"
+                        android:text="Belo Horizonte"
+                        android:textSize="16sp" />
+
+                    <RadioButton  android:id="@+id/natal"
+                        style="@style/FontAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:paddingLeft="24dp"
+                        android:text="Natal"
+                        android:textSize="16sp" />
+
+                </RadioGroup>
+
             </LinearLayout>
 
 
@@ -92,43 +97,43 @@
                 android:orientation="vertical">
 
                 <CheckBox
-                    android:id="@+id/pessoasSozinho"
+                    android:id="@+id/rioJaneiro"
                     style="@style/FontAnswer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:paddingLeft="24dp"
-                    android:text="@string/answerPeopleAlone"
+                    android:text="Rio de Janeiro"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:id="@+id/pessoasCasal"
+                    android:id="@+id/para"
                     style="@style/FontAnswer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:paddingLeft="24dp"
-                    android:text="@string/answerPeopleCouple"
+                    android:text="Pará"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:id="@+id/pessoasTresQuatro"
+                    android:id="@+id/ceara"
                     style="@style/FontAnswer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:paddingLeft="24dp"
-                    android:text="@string/answerPeopleThreeOrFour"
+                    android:text="Ceará"
                     android:textSize="16sp" />
 
                 <CheckBox
-                    android:id="@+id/pessoasQuatroMais"
+                    android:id="@+id/amazonas"
                     style="@style/FontAnswer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:paddingLeft="24dp"
-                    android:text="@string/answerPeopleMoreThanFour"
+                    android:text="Amazonas"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -215,7 +220,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:paddingLeft="24dp"
-                        android:text="@string/answerBedSizeYes"
+                        android:text="@string/answerYes"
                         android:textSize="16sp" />
 
                     <RadioButton
@@ -225,7 +230,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="16dp"
                         android:paddingLeft="24dp"
-                        android:text="@string/answerBedSizeNo"
+                        android:text="@string/answerNo"
                         android:textSize="16sp" />
                 </RadioGroup>
 
@@ -258,8 +263,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:hint="@string/input"
-                    android:inputType="textMultiLine"
-                    android:maxLines="5"
+                    android:inputType="text"
                     android:textAllCaps="true" />
             </LinearLayout>
 
