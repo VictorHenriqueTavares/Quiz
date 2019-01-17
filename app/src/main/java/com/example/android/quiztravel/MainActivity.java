@@ -1,7 +1,5 @@
 package com.example.android.quiztravel;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,20 +11,20 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private boolean answerOneZero;
-    private boolean answerOneOneOrTwo;
-    private boolean answerOneThreeOrFour;
-    private boolean answerOneMoreThanFour;
+    private boolean answerOneBrasilia;
+    private boolean answerOneSaoPaulo;
+    private boolean answerOneBeloHorizonte;
+    private boolean answerOneNatal;
 
-    private boolean answerPeopleAlone;
-    private boolean answerPeopleCouple;
-    private boolean answerPeopleThreeOrFour;
-    private boolean answerPeopleMoreThanFour;
+    private boolean answerRioJaneiro;
+    private boolean answerPara;
+    private boolean answerCeara;
+    private boolean answerAmazonas;
 
-    private boolean answerBedSizeYes;
-    private boolean answerBedSizeNo;
+    private boolean answerYes;
+    private boolean answerNo;
 
-    private int quantity = 0;
+    private int quantityStates = 0;
     private String opiniao;
 
 
@@ -39,62 +37,96 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void send(View view) {
-        CheckBox chkAnswerOneZero = (CheckBox) findViewById(R.id.viagemZero);
-        answerOneZero = chkAnswerOneZero.isChecked();
+        RadioButton rdAnswerOneZero = (RadioButton) findViewById(R.id.brasilia);
+        answerOneBrasilia = rdAnswerOneZero.isChecked();
 
-        CheckBox chkAnswerOneOneOrTwo = (CheckBox) findViewById(R.id.viagemUmaDuas);
-        answerOneOneOrTwo = chkAnswerOneOneOrTwo.isChecked();
+        RadioButton rdAnswerOneOneOrTwo = (RadioButton) findViewById(R.id.saoPaulo);
+        answerOneSaoPaulo = rdAnswerOneOneOrTwo.isChecked();
 
-        CheckBox chkAnswerOneThreeOrFour = (CheckBox) findViewById(R.id.viagemTresQuatro);
-        answerOneThreeOrFour = chkAnswerOneThreeOrFour.isChecked();
+        RadioButton rdAnswerOneThreeOrFour = (RadioButton) findViewById(R.id.beloHorizonte);
+        answerOneBeloHorizonte = rdAnswerOneThreeOrFour.isChecked();
 
-        CheckBox chkAnswerOneMoreThanFour = (CheckBox) findViewById(R.id.viagemQuatroMais);
-        answerOneMoreThanFour = chkAnswerOneMoreThanFour.isChecked();
+        RadioButton rdAnswerOneMoreThanFour = (RadioButton) findViewById(R.id.natal);
+        answerOneNatal = rdAnswerOneMoreThanFour.isChecked();
 
-        CheckBox chkAnswerPeopleAlone = (CheckBox) findViewById(R.id.pessoasSozinho);
-        answerPeopleAlone = chkAnswerPeopleAlone.isChecked();
+        CheckBox chkAnswerPeopleAlone = (CheckBox) findViewById(R.id.rioJaneiro);
+        answerRioJaneiro = chkAnswerPeopleAlone.isChecked();
 
-        CheckBox chkAnswerPeopleCouple = (CheckBox) findViewById(R.id.pessoasCasal);
-        answerPeopleCouple = chkAnswerPeopleCouple.isChecked();
+        CheckBox chkAnswerPeopleCouple = (CheckBox) findViewById(R.id.para);
+        answerPara = chkAnswerPeopleCouple.isChecked();
 
-        CheckBox chkAnswerPeopleThreeOrFour = (CheckBox) findViewById(R.id.pessoasTresQuatro);
-        answerPeopleThreeOrFour = chkAnswerPeopleThreeOrFour.isChecked();
+        CheckBox chkAnswerPeopleThreeOrFour = (CheckBox) findViewById(R.id.ceara);
+        answerCeara = chkAnswerPeopleThreeOrFour.isChecked();
 
-        CheckBox chkAnswerPeopleMoreThanFour = (CheckBox) findViewById(R.id.pessoasQuatroMais);
-        answerPeopleMoreThanFour = chkAnswerPeopleMoreThanFour.isChecked();
+        CheckBox chkAnswerPeopleMoreThanFour = (CheckBox) findViewById(R.id.amazonas);
+        answerAmazonas = chkAnswerPeopleMoreThanFour.isChecked();
 
-        RadioButton rdAnswerBedSizeYes = (RadioButton) findViewById(R.id.sim);
-        answerBedSizeYes = rdAnswerBedSizeYes.isChecked();
+        RadioButton rdAnsweYes = (RadioButton) findViewById(R.id.sim);
+        answerYes = rdAnsweYes.isChecked();
 
-        RadioButton rdAnswerBedSizeNo = (RadioButton) findViewById(R.id.nao);
-        answerBedSizeNo = rdAnswerBedSizeNo.isChecked();
+        RadioButton rdAnswerNo = (RadioButton) findViewById(R.id.nao);
+        answerNo = rdAnswerNo.isChecked();
 
         EditText editText = (EditText) findViewById(R.id.input_name);
         opiniao = (editText.getText()).toString();
 
-        Toast.makeText(this, "OK", Toast.LENGTH_SHORT).show();
+        displayAnswer();
+
+    }
+
+    public void displayAnswer() {
+        String answer = "";
+        int quantidadeCerta = 1;
+
+        if (answerOneBrasilia) {
+            quantidadeCerta++;
+        }
+        if (answerPara && answerAmazonas && !answerRioJaneiro && !answerCeara) {
+            quantidadeCerta++;
+        }
+
+        if (quantityStates == 26) {
+            quantidadeCerta++;
+        }
+
+        if (answerNo) {
+            quantidadeCerta++;
+        }
+
+        if (opiniao.equals("Sergipe")) {
+            quantidadeCerta++;
+        }
+        answer = "Você acertou " + quantidadeCerta + " respostas!\n";
+        if (quantidadeCerta < 3) {
+            answer += "Que pena!\nVocê precisa conhecer um pouco mais sobre nosso pais.";
+        } else if (quantidadeCerta < 5) {
+            answer += "Parabéns!\nVocê conhece bastante sobre o Brasil.";
+        } else {
+            answer += "UAU!\nVocê acertou todas as resposta.";
+        }
+        Toast.makeText(this, answer, Toast.LENGTH_SHORT).show();
     }
 
     public void increment(View view) {
-        if (quantity < 100) {
-            quantity++;
-            displayQuantity(quantity);
+        if (quantityStates < 100) {
+            quantityStates++;
+            displayQuantity(quantityStates);
         } else {
-            Toast.makeText(this, "You cannot have more than 100 coffees", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "A quantidade máxima é 100.", Toast.LENGTH_SHORT).show();
         }
     }
 
     public void decrement(View view) {
-        if (quantity > 1) {
-            quantity--;
-            displayQuantity(quantity);
+        if (quantityStates > 1) {
+            quantityStates--;
+            displayQuantity(quantityStates);
         } else {
-            Toast.makeText(this, "You cannot have less than 1 coffee", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "A quantidade minima é 1.", Toast.LENGTH_SHORT).show();
         }
     }
 
     /**
-     * This method displays the given quantity value on the screen.
+     * This method displays the given quantityStates value on the screen.
      */
     private void displayQuantity(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
