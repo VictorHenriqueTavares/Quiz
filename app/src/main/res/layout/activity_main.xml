@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SytleDarkBlue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:text="@string/questionOne" />
+
+            <LinearLayout
+                style="@style/SytleDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/viagemZero"
+                    style="@style/FontAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:paddingLeft="24dp"
+                    android:text="@string/answerOneZero"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/viagemUmaDuas"
+                    style="@style/FontAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:paddingLeft="24dp"
+                    android:text="@string/answerOneOneOrTwo"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/viagemTresQuatro"
+                    style="@style/FontAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:paddingLeft="24dp"
+                    android:text="@string/answerOneThreeOrFour"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/viagemQuatroMais"
+                    style="@style/FontAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:paddingLeft="24dp"
+                    android:text="@string/answerOneMoreThanFour"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SytleDarkBlue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:text="@string/questionTwo" />
+
+            <LinearLayout
+                style="@style/SytleDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/pessoasSozinho"
+                    style="@style/FontAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:paddingLeft="24dp"
+                    android:text="@string/answerPeopleAlone"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/pessoasCasal"
+                    style="@style/FontAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:paddingLeft="24dp"
+                    android:text="@string/answerPeopleCouple"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/pessoasTresQuatro"
+                    style="@style/FontAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:paddingLeft="24dp"
+                    android:text="@string/answerPeopleThreeOrFour"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/pessoasQuatroMais"
+                    style="@style/FontAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:paddingLeft="24dp"
+                    android:text="@string/answerPeopleMoreThanFour"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SytleDarkBlue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:text="@string/questionThree" />
+
+            <LinearLayout
+                style="@style/SytleDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:onClick="decrement"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/quantity_text_view"
+                        android:layout_width="16dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="1"
+                        android:textColor="@android:color/black" />
+
+                    <Button
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:onClick="increment"
+                        android:text="+" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SytleDarkBlue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:text="@string/questionFour" />
+
+            <LinearLayout
+                style="@style/SytleDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/sim"
+                        style="@style/FontAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:paddingLeft="24dp"
+                        android:text="@string/answerBedSizeYes"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/nao"
+                        style="@style/FontAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:paddingLeft="24dp"
+                        android:text="@string/answerBedSizeNo"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SytleDarkBlue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:text="@string/questionFive" />
+
+            <LinearLayout
+                style="@style/SytleDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:hint="@string/input"
+                    android:inputType="textMultiLine"
+                    android:maxLines="5"
+                    android:textAllCaps="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/SytleDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="96dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:onClick="send"
+                    android:text="Send" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

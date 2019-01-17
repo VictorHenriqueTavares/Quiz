@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizTravel</string>
+    <string name="questionTwo">Com quantas pessoas você costuma viajar ?</string>
+    <string name="questionOne">Quantas vezes você viaja por ano ?</string>
+    <string name="questionFour">Para você tamanho da cama do hotel importa ?</string>
+    <string name="questionThree">Qual a média de dias você permence viajando ?</string>
+    <string name="questionFive">Descreva a sua experiencia em utilizar nossos serviços.</string>
+    <string name="answerOneZero">1 vez</string>
+    <string name="answerOneOneOrTwo">1 ou 2 vezes</string>
+    <string name="answerOneThreeOrFour">3 ou 4 vezes</string>
+    <string name="answerOneMoreThanFour">Mais que 4 vezes</string>
+    <string name="answerPeopleAlone">Sozinho</string>
+    <string name="answerPeopleCouple">Casal</string>
+    <string name="answerPeopleThreeOrFour">3 ou 4 pessoas</string>
+    <string name="answerPeopleMoreThanFour">Mais que 4 pessoas</string>
+    <string name="answerBedSizeYes">Sim</string>
+    <string name="answerBedSizeNo">Não</string>
+    <string name="input">Digite sua opinião:</string>
+    <string name="submit">Enviar</string>
+</resources>

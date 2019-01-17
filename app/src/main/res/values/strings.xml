@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">QuizTravel</string>
+    <string name="questionOne">How many times do you travel a year?</string>
+    <string name="questionTwo">How many people do you travel with?</string>
+    <string name="questionFour">For you hotel bed size does it matter?</string>
+    <string name="questionFive">Describe your experience in using our services.</string>
+    <string name="answerOneZero">0 times</string>
+    <string name="answerOneOneOrTwo">1 or 2 times</string>
+    <string name="answerOneThreeOrFour">3 or 4 times</string>
+    <string name="answerOneMoreThanFour">More than 4 times</string>
+    <string name="answerPeopleAlone">Alone</string>
+    <string name="answerPeopleCouple">Couple</string>
+    <string name="answerPeopleThreeOrFour">3 or 4 people</string>
+    <string name="answerPeopleMoreThanFour">More than 4 people</string>
+    <string name="answerBedSizeYes">Yes</string>
+    <string name="answerBedSizeNo">No</string>
+    <string name="questionThree">What is the average number of days you are allowed to travel?</string>
+    <string name="input">Enter your opinion:</string>
+    <string name="submit">Send</string>
+</resources>
